@@ -6,13 +6,12 @@ class Ship:
 
 shipDict = {}
 with open("..\..\\visualisation\lockmasterApp\data\ships.txt", "r") as f:
+    # with open("ships.txt", "r") as f:
     T = int(f.readline())
     number_of_ships = int(f.readline())
-    print(T)
     for i, ship in enumerate(f):
         s = ship.split(', ')
         shipDict[f"ship{i + 1}"] = Ship(int(s[0]), int(s[1]))
-
 
 arrival_times = []
 arrival_positions = []
